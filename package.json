@@ -1,0 +1,20 @@
+{
+	"name": "",
+	"description": "",
+	"version": "0.0.1",
+	"author": "",
+	"scripts": {
+		"start": "node app"
+	},
+	"dependencies": {
+		"express": "*",
+		"ejs": "*",
+		"ejs-locals": "*",
+		"less-middleware": "*",
+		"socket.io": "*",
+		"socket.io-client": "*",
+		"async": "*",
+		"underscore": "*",
+		"nconf": "*"
+	}
+}
