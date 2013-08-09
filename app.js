@@ -1,3 +1,6 @@
-var config = require('./config/app-config');
+var config = require('./config/app-config')
+	App = require('./lib/App');
 
-require('./interfaces/app')(config);
+App.boot(config, function(){
+	require('./interfaces/web')(config);
+});

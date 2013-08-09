@@ -18,7 +18,7 @@ if(nconf.get('NODE_ENV')){
 }
 
 nconf.defaults({
-	port: 1979
+	port: 3000
 	, mainDir: path.dirname(__dirname)
 	, logLevel: 0
 });
