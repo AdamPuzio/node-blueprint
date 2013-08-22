@@ -28,6 +28,29 @@ $ app.js --config test
 ```
 This will attempt to load the config file `config/test.json`
 
+## Routing
+
+The `/routes` directory is used to manage any number of routing files. Any .js file in this 
+directory will be processed and both `app` (the Express application) and `router` (the Router
+class) will be passed to it. 
+
+``` javascript
+module.exports = function(app, router){
+	// A standard Express route
+	app.get('/', function(req, res){
+		res.send('home');
+	});
+	
+	// A Router route as a function
+	router.route('/test', function(req, res){
+		res.send('test');
+	});
+	
+	// A Router route pointing to a controller
+	router.route('/test2', 'TestController.test');
+}
+```
+
 ## Docs & Resources
 ### Node.js Modules
 * [Express](https://github.com/visionmedia/express)

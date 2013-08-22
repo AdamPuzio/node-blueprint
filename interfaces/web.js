@@ -3,7 +3,8 @@ var path = require('path')
 	, express = require('express')
 	, engine = require('ejs-locals')
 	, app = express()
-	, server = http.createServer(app);
+	, server = http.createServer(app)
+	, Router = require('../lib/Router');
 
 var config;
 var module_scripts = [];
@@ -32,7 +33,7 @@ module.exports = function(cfg){
 	});
 	
 	// Load routes
-	require('../routes/routes')(app);
+	Router.boot(app);
 	
 	server.listen(app.get('port'), function(){
 		console.log('Listening on port ' + app.get('port'));
