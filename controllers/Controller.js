@@ -14,4 +14,3 @@ Controller.prototype.render = function(view, layout){
 };
 
 module.exports = Controller;
-//module.exports = function(){ return new Controller; }
